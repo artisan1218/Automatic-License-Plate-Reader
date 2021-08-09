@@ -62,7 +62,11 @@ The CNN can get ~80% accuracy on the validation set, which is not very accurate.
 To accommodate this issue, the bounding box of the plate(green rectangle) will be enlarged in inversely proportional to the plate-image ratio.
 For example, if a plate is small in the original image, we only need to enlarge it by a little bit so that it can cover all plate. However, if a plate is large in the image, which means the image is almost all about this plate, we then need to enlarge it by a lot because the plate itself is already very large compare to the whole image.
 
-Consider this big plate, if the bounding box cannot fully cover the whole plate, we then need to make it larger by a lot otherwise the bounding box still cannot cover whote plate.\
+Enlarged bounding box that covers the whole plate:\
+![3c4cb765624a44cb69bcd35c578fa67](https://user-images.githubusercontent.com/25105806/128785525-0eb7e4f1-5d36-4e11-b24a-82ae1a71b9b8.png)
+
+
+Consider this big plate, if the bounding box cannot fully cover the whole plate, we then need to make it larger by a lot otherwise the bounding box still cannot cover whole plate.\
 <img src="https://user-images.githubusercontent.com/25105806/128644302-9985ccc9-c4c0-4856-8da5-039c2e155754.png" width="50%" height="50%">
 
 However, if there is small plate like this, we only need to enlarge it a little bit and it can cover the whole plate. Otherwise we just make the candidate plate area too large to OCR
